@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroAleatorio = Math.round(Math.random() * 10);
+    var tentativas = 1;
+
+    while( tentativas <=3 ) {
+        var chute = parseInt(prompt("Humano, digite seu número!"));
+        
+        if (chute == numeroAleatorio) {
+            mostra("Parabéns, você acertou! O número sorteado foi " + numeroAleatorio);
+            mostra("Hahah foi pura sorte!!");
+            break;
+
+        } else {
+            mostra("Você errou, quem sabe na próxima :). O número sorteado foi " + numeroAleatorio);
+        } 
+        
+        tentativas++;
+    }
+
+</script>
